@@ -12,7 +12,9 @@
 		"Log": true,
 		"MM": true,
 		"Module": true,
-		"moment": true
+		"moment": true,
+		"annyang": true,
+		"responsiveVoice": true
 	},
 	"parserOptions": {
 		"sourceType": "module",

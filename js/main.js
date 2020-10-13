@@ -490,7 +490,11 @@ var MM = (function () {
 			Log.setLogLevel(config.logLevel);
 
 			Translator.loadCoreTranslations(config.language);
-			Loader.loadModules();
+			setTimeout(function () {
+				var splash = document.getElementById("splash");
+				splash.parentNode.removeChild(splash);
+				Loader.loadModules();
+			}, 1000);
 		},
 
 		/**

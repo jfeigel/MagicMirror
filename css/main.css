@@ -22,6 +22,28 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#splash {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  animation: fade-in-out 1000ms ease-in-out infinite alternate;
+}
+
+#splash img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes fade-in-out {
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
 /**
  * Default styles.
  */

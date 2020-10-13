@@ -8,6 +8,8 @@ const Log = require("./logger.js");
 var config = process.env.config ? JSON.parse(process.env.config) : {};
 // Module to control application life.
 const app = electron.app;
+app.commandLine.appendSwitch("ignore-certificate-errors", "true");
+app.commandLine.appendSwitch("allow-insecure-localhost", "true");
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow;
 
@@ -53,7 +55,7 @@ function createWindow() {
 	// If config.address is not defined or is an empty string (listening on all interfaces), connect to localhost
 
 	var prefix;
-	if (config["tls"] !== null && config["tls"]) {
+	if (config["useHttps"] !== null && config["useHttps"]) {
 		prefix = "https://";
 	} else {
 		prefix = "http://";
