@@ -33,10 +33,15 @@ var Loader = (function () {
 				// This is done after all the modules so we can
 				// overwrite all the defined styles.
 
-				loadFile(config.customCss, function () {
-					// custom.css loaded. Start all modules.
+				try {
+					fs.accessSync(config.customCss);
+					loadFile(config.customCss, function () {
+						// custom.css loaded. Start all modules.
+						startModules();
+					});
+				} catch {
 					startModules();
-				});
+				}
 			}
 		};
 

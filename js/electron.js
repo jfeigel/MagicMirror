@@ -20,6 +20,8 @@ let mainWindow;
  */
 function createWindow() {
 	app.commandLine.appendSwitch("autoplay-policy", "no-user-gesture-required");
+	app.commandLine.appendSwitch("ignore-certificate-errors", "true");
+	app.commandLine.appendSwitch("allow-insecure-localhost", "true");
 	var electronOptionsDefaults = {
 		width: 800,
 		height: 600,

@@ -76,3 +76,8 @@ Temporary Items
 *.orig
 *.rej
 *.bak
+
+# Personal files
+core
+**/*.crt
+**/*.key
