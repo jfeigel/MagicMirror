@@ -20,8 +20,8 @@ const NewsfeedFetcher = function (url, reloadInterval, encoding, logFeedWarnings
 	let items = [];
 	let reloadIntervalMS = reloadInterval;
 
-	let fetchFailedCallback = function () {};
-	let itemsReceivedCallback = function () {};
+	let fetchFailedCallback = function () { };
+	let itemsReceivedCallback = function () { };
 
 	if (reloadIntervalMS < 1000) {
 		reloadIntervalMS = 1000;

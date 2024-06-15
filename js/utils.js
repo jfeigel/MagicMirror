@@ -4,7 +4,7 @@ const si = require("systeminformation");
 
 module.exports = {
 
-	async logSystemInformation  () {
+	async logSystemInformation () {
 		try {
 			let installedNodeVersion = execSync("node -v", { encoding: "utf-8" }).replace("v", "").replace(/(?:\r\n|\r|\n)/g, "");
 

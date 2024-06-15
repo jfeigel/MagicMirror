@@ -73,27 +73,27 @@
 			if (newLevel) {
 				Object.keys(logLevel).forEach(function (key) {
 					if (!newLevel.includes(key.toLocaleUpperCase())) {
-						logLevel[key] = function () {};
+						logLevel[key] = function () { };
 					}
 				});
 			}
 		};
 	} else {
 		logLevel = {
-			debug () {},
-			log () {},
-			info () {},
-			warn () {},
-			error () {},
-			group () {},
-			groupCollapsed () {},
-			groupEnd () {},
-			time () {},
-			timeEnd () {},
-			timeStamp () {}
+			debug () { },
+			log () { },
+			info () { },
+			warn () { },
+			error () { },
+			group () { },
+			groupCollapsed () { },
+			groupEnd () { },
+			time () { },
+			timeEnd () { },
+			timeStamp () { }
 		};
 
-		logLevel.setLogLevel = function () {};
+		logLevel.setLogLevel = function () { };
 	}
 
 	return logLevel;

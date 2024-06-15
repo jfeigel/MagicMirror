@@ -11,8 +11,8 @@ describe("server_functions tests", () => {
 		let fetchMock;
 
 		beforeEach(() => {
-			fetchResponseHeadersGet = jest.fn(() => {});
-			fetchResponseHeadersText = jest.fn(() => {});
+			fetchResponseHeadersGet = jest.fn(() => { });
+			fetchResponseHeadersText = jest.fn(() => { });
 			fetchResponse = {
 				headers: {
 					get: fetchResponseHeadersGet
@@ -26,8 +26,8 @@ describe("server_functions tests", () => {
 			fetchMock = fetch;
 
 			corsResponse = {
-				set: jest.fn(() => {}),
-				send: jest.fn(() => {})
+				set: jest.fn(() => { }),
+				send: jest.fn(() => { })
 			};
 
 			request = {
